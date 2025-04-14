@@ -45,27 +45,27 @@ public class Etal<P extends Produit> implements IEtal<P> {
 		return descriptionSpecifique;
 	}
 
-	@Override
-	public void occuperEtal(Gaulois vendeur, P produit, int quantite) {
-		this.vendeur = vendeur;
-		this.produit = produit;
-		this.quantiteDebutMarche = quantite;
-		this.quantite = quantite;
-		this.etalOccupe = true;
-	}
-
-	@Override
-	public void libererEtal() {
-		this.vendeur = null;
-		this.produit = null;
-		this.quantiteDebutMarche = 0;
-		this.quantite = 0;
-		this.etalOccupe = false;
-	}
-
-	@Override
-	public String toString() {
-	    return "Étal de " + Objects.toString(produit, "produits variés") + " - " + descriptionSpecifique;
-	}
+//	@Override
+//	public void occuperEtal(Gaulois vendeur, P produit, int quantite) {
+//		this.vendeur = vendeur;
+//		this.produit = produit;
+//		this.quantiteDebutMarche = quantite;
+//		this.quantite = quantite;
+//		this.etalOccupe = true;
+//	}
+//
+//	@Override
+//	public void libererEtal() {
+//		this.vendeur = null;
+//		this.produit = null;
+//		this.quantiteDebutMarche = 0;
+//		this.quantite = 0;
+//		this.etalOccupe = false;
+//	}
+//
+//	@Override
+//	public String toString() {
+//	    return "Étal de " + Objects.toString(produit, "produits variés") + " - " + descriptionSpecifique;
+//	}
 }
 

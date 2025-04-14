@@ -35,11 +35,25 @@ public class ScenarioTest {
 	}
 
 	public static void main(String[] args) {
-		IEtal<Produit>[] marche = new IEtal[3];
-		IEtal<Sanglier> etalSanglier = new Etal<>("Billot intégré");
-		IEtal<Poisson> etalPoisson = new Etal<>("Revêtement en céramique");
+	     // Déclaration du tableau d'étals, mais ici il est spécifié que le tableau ne contiendra que des étals de Sanglier
+        IEtal<Sanglier>[] marche = new IEtal[3];
+
+        // Création des étals de Sanglier
+        IEtal<Sanglier> etalSanglier1 = new Etal<>("Billot intégré pour découpe de sangliers");
+        IEtal<Sanglier> etalSanglier2 = new Etal<>("Étal spécifique pour découpe");
+
+        // Ajout des étals au tableau marche
+        marche[0] = etalSanglier1;
+        marche[1] = etalSanglier2;
+
+        // Affichage des descriptions spécifiques pour chaque étal
+        System.out.println("Description de l'étal Sanglier 1: " + marche[0].getDescriptionSpecifique());
+        System.out.println("Description de l'étal Sanglier 2: " + marche[1].getDescriptionSpecifique());
+
+        
+    }
 		
 
 	}
 
-}
+

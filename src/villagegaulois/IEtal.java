@@ -15,10 +15,10 @@ public interface IEtal<P extends Produit> {
 
 	String getDescriptionSpecifique();
 
-	void occuperEtal(Gaulois vendeur, P produit, int quantite);
-
-	void libererEtal();
-
-	String toString();
+//	void occuperEtal(Gaulois vendeur, P produit, int quantite);
+//
+//	void libererEtal();
+//
+//	String toString();
 
 }
