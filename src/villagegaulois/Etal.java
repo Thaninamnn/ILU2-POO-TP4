@@ -6,11 +6,13 @@ import personnages.Gaulois;
 import java.util.Objects;
 
 import personnages.Gaulois;
+import produit.Poisson;
 import produit.Produit;
+import produit.Sanglier;
 
-public class Etal<P extends Produit> implements IEtal<P> {
+public class Etal implements IEtal {
 	private Gaulois vendeur;
-	private P produit;
+	private Produit produit;
 	private int quantiteDebutMarche;
 	private int quantite;
 	private boolean etalOccupe = false;
@@ -36,7 +38,7 @@ public class Etal<P extends Produit> implements IEtal<P> {
 	}
 
 	@Override
-	public P getProduit() {
+	public Produit getProduit() {
 		return produit;
 	}
 
@@ -45,14 +47,14 @@ public class Etal<P extends Produit> implements IEtal<P> {
 		return descriptionSpecifique;
 	}
 
-//	@Override
-//	public void occuperEtal(Gaulois vendeur, P produit, int quantite) {
-//		this.vendeur = vendeur;
-//		this.produit = produit;
-//		this.quantiteDebutMarche = quantite;
-//		this.quantite = quantite;
-//		this.etalOccupe = true;
-//	}
+	@Override
+	public void occuperEtal(Gaulois vendeur, Produit produit, int quantite) {
+		 this.vendeur = vendeur;
+	        this.produit = (Produit) produit; // Cast explicite ici
+	        this.quantite = quantite;
+	        this.etalOccupe = true;
+	}
+
 //
 //	@Override
 //	public void libererEtal() {

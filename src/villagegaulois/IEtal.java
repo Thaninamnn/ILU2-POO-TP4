@@ -3,7 +3,7 @@ package villagegaulois;
 import personnages.Gaulois;
 import produit.Produit;
 
-public interface IEtal<P extends Produit> {
+public interface IEtal {
 
 	boolean isEtalOccupe();
 
@@ -11,11 +11,11 @@ public interface IEtal<P extends Produit> {
 
 	int getQuantite();
 
-	P getProduit();
+	Produit getProduit();
 
 	String getDescriptionSpecifique();
 
-//	void occuperEtal(Gaulois vendeur, P produit, int quantite);
+	void occuperEtal(Gaulois vendeur, Produit produit, int quantite);
 //
 //	void libererEtal();
 //

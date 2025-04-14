@@ -36,19 +36,21 @@ public class ScenarioTest {
 
 	public static void main(String[] args) {
 	     // Déclaration du tableau d'étals, mais ici il est spécifié que le tableau ne contiendra que des étals de Sanglier
-        IEtal<Sanglier>[] marche = new IEtal[3];
+		// Déclaration de marché avec des étals de type non générique
+        IEtal[] etals = new IEtal[3];
+        
+        // Création des étals spécifiques
+        Etal etalSanglier = new Etal("Billot intégré");
+        Etal etalPoisson = new Etal("Revêtement en céramique");
+        
+        // Affectation des étals dans le tableau
+        etals[0] = etalSanglier;
+        etals[1] = etalPoisson;
+        
 
-        // Création des étals de Sanglier
-        IEtal<Sanglier> etalSanglier1 = new Etal<>("Billot intégré pour découpe de sangliers");
-        IEtal<Sanglier> etalSanglier2 = new Etal<>("Étal spécifique pour découpe");
-
-        // Ajout des étals au tableau marche
-        marche[0] = etalSanglier1;
-        marche[1] = etalSanglier2;
-
-        // Affichage des descriptions spécifiques pour chaque étal
-        System.out.println("Description de l'étal Sanglier 1: " + marche[0].getDescriptionSpecifique());
-        System.out.println("Description de l'étal Sanglier 2: " + marche[1].getDescriptionSpecifique());
+//        // Affichage des descriptions spécifiques pour chaque étal
+//        System.out.println("Description de l'étal Sanglier 1: " + marche[0].getDescriptionSpecifique());
+//        System.out.println("Description de l'étal Sanglier 2: " + marche[1].getDescriptionSpecifique());
 
         
     }
